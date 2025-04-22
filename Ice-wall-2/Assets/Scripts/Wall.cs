@@ -9,5 +9,6 @@ public class Wall : MonoBehaviour
       this.Bank.Deposit(1);
       Debug.Log ("you clicked the wall" + Bank.Money);    
     }
+  
 
 }
