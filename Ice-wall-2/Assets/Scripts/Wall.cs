@@ -3,11 +3,11 @@ using UnityEngine;
 public class Wall : MonoBehaviour
 {
 
-  public int money {get; set;} 
+    public Bank Bank;
     private void OnMouseDown()
     {
-       money = money + 1;
-        Debug.Log ("you clicked the wall" + money);    
+      this.Bank.Deposit(1);
+      Debug.Log ("you clicked the wall" + Bank.Money);    
     }
 
 }

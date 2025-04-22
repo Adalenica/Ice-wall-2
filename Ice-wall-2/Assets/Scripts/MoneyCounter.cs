@@ -1,16 +1,21 @@
 using UnityEngine;
+using TMPro;
 
 public class MoneyCounter : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+   public Bank Bank;
+   public TextMeshProUGUI label;
+    public void Awake()
     {
-        
+        label.text = Bank.Money.ToString();
+        Bank.OnChanged.AddListener(UpdateLabel);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void UpdateLabel()
     {
-        
+        label.text = Bank.Money.ToString();
+    }
+    public void OnDestroy()
+    {
+        Bank.OnChanged.RemoveListener(UpdateLabel);
     }
 }
