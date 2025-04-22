@@ -6,9 +6,11 @@ public class Withdrawal : MonoBehaviour
     [SerializeField]private int Price;
     private void OnMouseDown()
     {
-        if (Bank.Money >=Price )
+        if (Bank.Money >= Price )
         {  
             this.Bank.Withdraw(-Price);
+            Bank.Clicker ++;
+            Price ++;
         }
     }
 }
