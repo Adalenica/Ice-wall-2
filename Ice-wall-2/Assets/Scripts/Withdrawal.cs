@@ -3,8 +3,12 @@ using UnityEngine;
 public class Withdrawal : MonoBehaviour
 {
     public Bank Bank;
+    [SerializeField]private int Price;
     private void OnMouseDown()
     {
-        this.Bank.Withdraw(-1);
+        if (Bank.Money >=Price )
+        {  
+            this.Bank.Withdraw(-Price);
+        }
     }
 }

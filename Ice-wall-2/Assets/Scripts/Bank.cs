@@ -12,9 +12,7 @@ public class Bank : MonoBehaviour
     }
     public void Withdraw(int value)
     {
-       
-         Money += value;
-         OnChanged.Invoke();
-       
+      Money += value;
+      OnChanged.Invoke();
     }
 }
