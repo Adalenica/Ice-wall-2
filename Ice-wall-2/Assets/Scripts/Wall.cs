@@ -4,10 +4,9 @@ public class Wall : MonoBehaviour
 {
 
     public Bank Bank;
-    public Clicker Clicker;
     private void OnMouseDown()
     {
-      this.Bank.Deposit(Clicker.Click);
+      this.Bank.Deposit(1);
       Debug.Log ("you clicked the wall" + Bank.Money);    
     }
 

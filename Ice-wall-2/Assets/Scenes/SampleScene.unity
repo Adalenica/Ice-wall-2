@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bank: {fileID: 1367390711}
-  Price: 2
+  _unitData: {fileID: 11400000, guid: f66540993471e0e4986f354c95cf94cd, type: 2}
 --- !u!61 &102128673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -521,7 +521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bank: {fileID: 1367390711}
-  Price: 1
+  _unitData: {fileID: 11400000, guid: 3b5398f34fb2a7a48b6a37d211584df9, type: 2}
 --- !u!61 &903131721
 BoxCollider2D:
   m_ObjectHideFlags: 0
