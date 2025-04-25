@@ -5,7 +5,6 @@ public class Bank : MonoBehaviour
 {
     public int Money = 0;
     public UnityEvent OnChanged;
-    public int Clicker = 1;
     public void Deposit(int value)
     {
       Money += value;
