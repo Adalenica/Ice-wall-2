@@ -2,11 +2,20 @@ using UnityEngine;
 
 public class PurchaseButton : MonoBehaviour
 {
-    public Bank Bank;
+	[SerializeField] private UnitSpawner _unitSpawner;
+	[SerializeField] private Bank _bank;
     [SerializeField] private UnitData _unitData;
+	
     public void OnMouseDown()
     {
-        Debug.Log ("withdraw");
-        this.Bank.Withdraw(_unitData.Price);
-    }
+		if (_bank.Withdraw(_unitData.Price))
+		{
+			Debug.Log("withdraw");
+			_unitSpawner.SpawnUnit();
+		}
+		else
+		{
+			Debug.Log("can't withdraw");
+		}
+	}
 }

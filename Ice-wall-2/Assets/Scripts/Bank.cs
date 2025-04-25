@@ -10,12 +10,15 @@ public class Bank : MonoBehaviour
       Money += value;
       OnChanged.Invoke();
     }
-    public void Withdraw(int value)
+    public bool Withdraw(int value)
     {
       if(Money >= value)
       {
         Money -= value;
         OnChanged.Invoke();
-      }
+		return true;
+	  } 
+	  
+	  return false;
     }
 }
