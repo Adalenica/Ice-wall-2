@@ -11,7 +11,7 @@ public class PurchaseButton : MonoBehaviour
 		if (_bank.Withdraw(_unitData.Price))
 		{
 			Debug.Log("withdraw");
-			_unitSpawner.SpawnUnit();
+			_unitSpawner.SpawnUnit(_unitData.UnitPrefab);
 		}
 		else
 		{

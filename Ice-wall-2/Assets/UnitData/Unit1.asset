@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Unit1
   m_EditorClassIdentifier: 
   Price: 1
+  UnitPrefab: {fileID: 312179642741573312, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}

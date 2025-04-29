@@ -4,4 +4,5 @@ using UnityEngine;
 public class UnitData : ScriptableObject
 {
     public int Price;
+	public GameObject UnitPrefab;
 }
