@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Price: 2
   UnitPrefab: {fileID: 7359996825624333734, guid: 092bc16018bd94b4f9739fb9a69af8ff, type: 3}
+  Strength: 2
+  AttackCooldown: 7
+  Speed: 1
