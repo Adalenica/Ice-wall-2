@@ -5,7 +5,7 @@ namespace DefaultNamespace
 {
 	public class UnitController: MonoBehaviour
 	{
-		private Wall wall;
+		private Wall _wall;
 		[ContextMenu("Attack")]
 		public void Attack()
 		{
@@ -13,8 +13,8 @@ namespace DefaultNamespace
 		}
 		public void Start()
 		{
-			wall = FindObjectOfType<Wall>();
-			if (wall != null)
+			_wall = FindFirstObjectByType<Wall>();
+			if (_wall != null)
 			{
 				Debug.Log("Found Wall");
 			}
