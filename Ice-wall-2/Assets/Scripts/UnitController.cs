@@ -41,7 +41,7 @@ namespace DefaultNamespace
 		private IEnumerator WaitForNextAttack()
 		{
 			Debug.Log("Waiting for attack");
-			yield return new WaitForSeconds(1f);
+			yield return new WaitForSeconds(_unitData.AttackCooldown);
 		}
 
 		private IEnumerator ReturnToOrigin()
