@@ -21,4 +21,10 @@ public class Wall : MonoBehaviour
 		}
 	}
 
+	public void TakeDamage(int damage)
+	{
+		_health -= damage;
+		Debug.Log ("you take damage " + damage);
+		Debug.Log (_health);
+	}
 }
