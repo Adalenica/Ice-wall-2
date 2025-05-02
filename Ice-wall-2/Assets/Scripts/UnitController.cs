@@ -5,18 +5,22 @@ namespace DefaultNamespace
 {
 	public class UnitController: MonoBehaviour
 	{
+		[SerializeField] private UnitData _unitData;	
+		
 		private Wall _wall;
+		
 		[ContextMenu("Attack")]
 		public void Attack()
 		{
 			Debug.Log("Attack");
 		}
+		
 		public void Start()
 		{
 			_wall = FindFirstObjectByType<Wall>();
 			if (_wall != null)
 			{
-				Debug.Log("Found Wall");
+				_wall.TakeDamage(_unitData.Strength);
 			}
 			else
 			{
