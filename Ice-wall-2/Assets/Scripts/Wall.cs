@@ -9,7 +9,6 @@ public class Wall : MonoBehaviour
     {
       this.Bank.Deposit(1);
 	  _health--;
-	  Debug.Log ("you clicked the wall" + Bank.Money); 
 	  Debug.Log (_health);
     }
 
@@ -25,6 +24,7 @@ public class Wall : MonoBehaviour
 	{
 		_health -= damage;
 		Debug.Log ("you take damage " + damage);
+		this.Bank.Deposit(damage);
 		Debug.Log (_health);
 	}
 }
