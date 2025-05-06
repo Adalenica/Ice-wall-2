@@ -25,6 +25,7 @@ public class Wall : MonoBehaviour
 	{
 		_health -= damage;
 		Debug.Log ("you take damage " + damage);
+		this.Bank.Deposit(damage);
 		Debug.Log (_health);
 	}
 }
