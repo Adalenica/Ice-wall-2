@@ -5,7 +5,7 @@ namespace DefaultNamespace
 {
 	public class RangeAttackUnitController: UnitController
 	{
-		[SerializeField] private BulletData BulletData;
+		[SerializeField] private ProjectileData ProjectileData;
 		protected override void StartAttackRoutine()
 		{
 			StartCoroutine(UnitRangedAttackRoutine());
@@ -26,7 +26,7 @@ namespace DefaultNamespace
 
 		private IEnumerator FireProjectile()
 		{
-			var bullet = Instantiate(BulletData.BulletPrefab);
+			var bullet = Instantiate(ProjectileData.ProjectilePrefab);
 			Debug.Log("Fire Projectile");
 			yield return new WaitForSeconds(1f);
 		}
