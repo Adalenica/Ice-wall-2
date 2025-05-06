@@ -11,7 +11,7 @@ namespace DefaultNamespace
 		[SerializeField] protected UnitData UnitData;	
 		
 		protected Wall Wall;
-		private Vector2 _spawnPosition;
+		public Vector2 SpawnPosition;
 
 		[ContextMenu("Attack")]
 		public void Attack()
@@ -41,8 +41,8 @@ namespace DefaultNamespace
 			float minX = -7f;
 			float maxX = 5f;
 
-			 _spawnPosition = new Vector2(Random.Range(minX, maxX), -4f);
-			transform.position = _spawnPosition;
+			 SpawnPosition = new Vector2(Random.Range(minX, maxX), -4f);
+			transform.position = SpawnPosition;
 		}
 
 		
@@ -57,7 +57,7 @@ namespace DefaultNamespace
 		{
 			Debug.Log("Return to origin");
 			var position = transform.position;
-			while (position.x > _spawnPosition.x)
+			while (position.x > SpawnPosition.x)
 			{
 				position.x -= UnitData.Speed * Time.deltaTime;
 				transform.position = position;
