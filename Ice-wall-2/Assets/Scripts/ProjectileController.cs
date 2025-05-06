@@ -9,16 +9,12 @@ namespace DefaultNamespace
 		[SerializeField] private ProjectileData _projectileData;
 		private Wall _wall;
 		private UnitController _unitController;
+		private RangeAttackUnitController _rangeAttackUnitController;
 
-		private void Start()
+		public void SetTarget(Wall wall)
 		{
-			SetUp();
+			_wall = wall;
 			StartCoroutine(ProjectileAttackRoutine());
-		}
-
-		private void SetUp()
-		{
-			_wall = FindFirstObjectByType<Wall>();
 		}
 		
 		private IEnumerator ProjectileAttackRoutine()

@@ -6,6 +6,7 @@ namespace DefaultNamespace
 	public class RangeAttackUnitController: UnitController
 	{
 		[SerializeField] private ProjectileData ProjectileData;
+		private ProjectileController _projectileController;
 		protected override void StartAttackRoutine()
 		{
 			StartCoroutine(UnitRangedAttackRoutine());
@@ -27,6 +28,8 @@ namespace DefaultNamespace
 		{
 			Vector3 offset = transform.up * 1f;
 			var bullet = Instantiate(ProjectileData.ProjectilePrefab, transform.position + offset, Quaternion.identity);
+			var projectileController = bullet.GetComponent<ProjectileController>();
+			projectileController.SetTarget(Wall);
 			yield return new WaitForSeconds(1f);
 		}
 	}
