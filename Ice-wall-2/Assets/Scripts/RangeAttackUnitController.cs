@@ -25,7 +25,8 @@ namespace DefaultNamespace
 
 		private IEnumerator FireProjectile()
 		{
-			var bullet = Instantiate(ProjectileData.ProjectilePrefab);
+			Vector3 offset = transform.up * 1f;
+			var bullet = Instantiate(ProjectileData.ProjectilePrefab, transform.position + offset, Quaternion.identity);
 			yield return new WaitForSeconds(1f);
 		}
 	}

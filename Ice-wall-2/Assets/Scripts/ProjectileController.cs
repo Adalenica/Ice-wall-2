@@ -8,7 +8,7 @@ namespace DefaultNamespace
 	{
 		[SerializeField] private ProjectileData _projectileData;
 		private Wall _wall;
-		private UnitController _spawnPosition;
+		private UnitController _unitController;
 
 		private void Start()
 		{
@@ -19,15 +19,8 @@ namespace DefaultNamespace
 		private void SetUp()
 		{
 			_wall = FindFirstObjectByType<Wall>();
-			//SpawnPosition();
 		}
-
-		private void SpawnPosition()
-		{
-			
-		}
-	
-
+		
 		private IEnumerator ProjectileAttackRoutine()
 		{
 			yield return MoveToWall();
