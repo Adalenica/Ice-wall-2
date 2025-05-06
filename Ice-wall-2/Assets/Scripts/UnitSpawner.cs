@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using UnityEngine;
 
 public class UnitSpawner : MonoBehaviour
@@ -6,5 +7,6 @@ public class UnitSpawner : MonoBehaviour
 	public void SpawnUnit(GameObject unitPrefab)
 	{
 		var unit = Instantiate(unitPrefab);
+		var unitController = unit.GetComponent<UnitController>();
 	}
 }
