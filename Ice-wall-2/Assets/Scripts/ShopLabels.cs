@@ -1,0 +1,16 @@
+using System;
+using UnityEngine;
+using TMPro;
+
+namespace DefaultNamespace
+{
+	public class ShopLabels: PurchaseButton
+	{
+		public TextMeshProUGUI _label;
+		
+		public void Awake()
+		{
+			_label.text = _unitData.name + "  " + _unitData.Price;
+		}
+	}
+}

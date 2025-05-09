@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -5,6 +6,11 @@ namespace DefaultNamespace
 	public class OpenShop: MonoBehaviour
 	{
 		[SerializeField] private GameObject shopWindow;
+
+		public void Start()
+		{
+			shopWindow.SetActive(false);
+		}
 
 		public void OnMouseDown()
 		{

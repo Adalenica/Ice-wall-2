@@ -8,7 +8,7 @@ namespace DefaultNamespace
 		[SerializeField] private Button myButton;
 		[SerializeField] private UnitSpawner _unitSpawner;
 		[SerializeField] private Bank _bank;
-		[SerializeField] private UnitData _unitData;
+		[SerializeField] protected UnitData _unitData;
     
 		void Start()
 		{

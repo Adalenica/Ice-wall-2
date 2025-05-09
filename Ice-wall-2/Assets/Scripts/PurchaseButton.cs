@@ -4,7 +4,7 @@ public class PurchaseButton : MonoBehaviour
 {
 	[SerializeField] private UnitSpawner _unitSpawner;
 	[SerializeField] private Bank _bank;
-    [SerializeField] private UnitData _unitData;
+    [SerializeField] protected UnitData _unitData;
 	
     public void OnMouseDown()
     {
