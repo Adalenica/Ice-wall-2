@@ -9,6 +9,7 @@ namespace DefaultNamespace
 	public class UnitController: MonoBehaviour
 	{
 		[SerializeField] protected UnitData UnitData;	
+		[SerializeField] private UpgradeManager _upgradeManager;
 		
 		protected Wall Wall;
 		public Vector2 SpawnPosition;

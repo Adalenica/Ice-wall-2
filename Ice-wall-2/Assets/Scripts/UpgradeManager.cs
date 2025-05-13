@@ -42,5 +42,11 @@ namespace DefaultNamespace
 			UpgradeData upgrade = CurrentUpgrade(unitData);
 			upgrade.StrengthMultiplier += strengthIncrease;
 		}
+		
+		public void UpgradeCooldown(UnitData unitData, float cooldownIncrease)
+		{
+			UpgradeData upgrade = CurrentUpgrade(unitData);
+			upgrade.CooldownDivisor += cooldownIncrease;
+		}
 	}
 }
