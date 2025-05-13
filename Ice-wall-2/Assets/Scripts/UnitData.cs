@@ -6,6 +6,6 @@ public class UnitData : ScriptableObject
     public int Price;
 	public GameObject UnitPrefab;
 	public int Strength;
-	public int AttackCooldown;
+	public float AttackCooldown;
 	public int Speed;
 }

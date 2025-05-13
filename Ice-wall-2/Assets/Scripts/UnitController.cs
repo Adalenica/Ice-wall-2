@@ -68,7 +68,8 @@ namespace DefaultNamespace
 
 		protected IEnumerator PerformAttack()
 		{
-			Wall.TakeDamage(UnitData.Strength);
+			var strength = UnitData.Strength;
+			Wall.TakeDamage(strength);
 			yield return new WaitForSeconds(1f);
 		}
 
