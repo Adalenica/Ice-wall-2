@@ -9,6 +9,7 @@ namespace DefaultNamespace
 		[SerializeField] private Bank _bank;
 		[SerializeField] private UnitData _unitData;
 		[SerializeField] private UpgradeManager _upgradeManager;
+		[SerializeField] private int _version;
 		
 		void Start()
 		{
@@ -19,7 +20,16 @@ namespace DefaultNamespace
 		{
 			if (_bank.Withdraw(_unitData.Price))
 			{
-				Debug.Log("withdraw");
+				if (_version == 1)
+				{
+					Debug.Log("attack upgraded");
+					_upgradeManager.UpgradeStrength(_unitData, 1);
+				}
+				else
+				{
+					Debug.Log("cooldown upgraded");
+					_upgradeManager.UpgradeCooldown(_unitData, 1);
+				}
 			}
 			else
 			{
