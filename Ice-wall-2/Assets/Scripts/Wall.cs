@@ -1,23 +1,26 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Wall : MonoBehaviour
 {
-	[SerializeField] private float _health;
+	[SerializeField] public float Health;
 	[SerializeField] private AudioSource _audioSource;
+	public UnityEvent OnChanged;
 
     public Bank Bank;
    
 	private void OnMouseDown()
     {
       this.Bank.Deposit(1);
-	  _health--;
+	  Health--;
+	  OnChanged.Invoke();
 	  _audioSource.Play();
-	  Debug.Log (_health);
+	  Debug.Log (Health);
     }
 
 	private void Update()
 	{
-		if (_health <= 0)
+		if (Health <= 0)
 		{
 			Destroy(gameObject);
 		}
@@ -25,10 +28,11 @@ public class Wall : MonoBehaviour
 
 	public void TakeDamage(float damage)
 	{
-		_health -= damage;
+		Health -= damage;
+		OnChanged.Invoke();
 		_audioSource.Play();
 		Debug.Log ("you take damage " + damage);
 		this.Bank.Deposit(Mathf.RoundToInt(damage));
-		Debug.Log (_health);
+		Debug.Log (Health);
 	}
 }

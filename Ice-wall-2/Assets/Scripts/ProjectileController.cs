@@ -44,7 +44,7 @@ namespace DefaultNamespace
 			Debug.Log("attacking wall");
 			var damage = _projectileData.Damage * _upgrade.StrengthMultiplier;
 			_wall.TakeDamage(damage);
-			yield return new WaitForSeconds(1f);
+			yield return null;
 		}
 
 		public void SetUpgrade(UpgradeData upgrade)
