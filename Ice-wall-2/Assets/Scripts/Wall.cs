@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
-	[SerializeField] private int _health;
+	[SerializeField] private float _health;
     public Bank Bank;
    
 	private void OnMouseDown()
@@ -20,11 +20,11 @@ public class Wall : MonoBehaviour
 		}
 	}
 
-	public void TakeDamage(int damage)
+	public void TakeDamage(float damage)
 	{
 		_health -= damage;
 		Debug.Log ("you take damage " + damage);
-		this.Bank.Deposit(damage);
+		this.Bank.Deposit(Mathf.RoundToInt(damage));
 		Debug.Log (_health);
 	}
 }

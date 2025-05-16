@@ -10,6 +10,7 @@ namespace DefaultNamespace
 		private Wall _wall;
 		private UnitController _unitController;
 		private RangeAttackUnitController _rangeAttackUnitController;
+		private UpgradeData _upgrade;
 
 		public void SetTarget(Wall wall)
 		{
@@ -40,8 +41,14 @@ namespace DefaultNamespace
 		private IEnumerator AttackWall()
 		{
 			Debug.Log("attacking wall");
-			_wall.TakeDamage(_projectileData.Damage);
+			var damage = _projectileData.Damage * _upgrade.StrengthMultiplier;
+			_wall.TakeDamage(damage);
 			yield return new WaitForSeconds(1f);
+		}
+
+		public void SetUpgrade(UpgradeData upgrade)
+		{
+			_upgrade = upgrade;
 		}
 	}
 }
