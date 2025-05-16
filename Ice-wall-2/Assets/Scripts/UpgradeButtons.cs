@@ -5,6 +5,7 @@ namespace DefaultNamespace
 {
 	public class UpgradeButtons: MonoBehaviour
 	{
+		[SerializeField] private AudioSource _audioSource;
 		[SerializeField] private Button myButton;
 		[SerializeField] private Bank _bank;
 		[SerializeField] private UnitData _unitData;
@@ -23,11 +24,13 @@ namespace DefaultNamespace
 				if (_version == 1)
 				{
 					Debug.Log("attack upgraded");
+					_audioSource.Play();
 					_upgradeManager.UpgradeStrength(_unitData, 1);
 				}
 				else
 				{
 					Debug.Log("cooldown upgraded");
+					_audioSource.Play();
 					_upgradeManager.UpgradeCooldown(_unitData, 1);
 				}
 			}

@@ -29,7 +29,7 @@ namespace DefaultNamespace
 
 		private IEnumerator FireProjectile()
 		{
-			Vector3 offset = transform.up * 1f;
+			Vector3 offset = transform.up * UnitData.ProjectileOffset;
 			var upgrade = UpgradeManager.CurrentUpgrade(UnitData);
 			var bullet = Instantiate(ProjectileData.ProjectilePrefab, transform.position + offset, Quaternion.identity);
 			var projectileController = bullet.GetComponent<ProjectileController>();

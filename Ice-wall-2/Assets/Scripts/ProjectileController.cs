@@ -10,6 +10,7 @@ namespace DefaultNamespace
 		private Wall _wall;
 		private UnitController _unitController;
 		private RangeAttackUnitController _rangeAttackUnitController;
+		private AerialUnitController _aerialUnitController;
 		private UpgradeData _upgrade;
 
 		public void SetTarget(Wall wall)
