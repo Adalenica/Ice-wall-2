@@ -11,6 +11,7 @@ public class Wall : MonoBehaviour
     {
       this.Bank.Deposit(1);
 	  _health--;
+	  _audioSource.Play();
 	  Debug.Log (_health);
     }
 

@@ -22,12 +22,12 @@ namespace DefaultNamespace
 			if (_bank.Withdraw(_unitData.Price))
 			{
 				Debug.Log("withdraw");
-				_audioSource.Play();
 				_unitSpawner.SpawnUnit(_unitData.UnitPrefab);
 			}
 			else
 			{
 				Debug.Log("can't withdraw");
+				_audioSource.Play();
 			}
 		}
 	}

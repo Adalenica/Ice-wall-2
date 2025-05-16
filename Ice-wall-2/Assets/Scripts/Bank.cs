@@ -10,7 +10,6 @@ public class Bank : MonoBehaviour
 	public void Deposit(int value)
     {
       Money += value;
-	  _audioSource.Play();
       OnChanged.Invoke();
     }
     public bool Withdraw(int value)
@@ -18,6 +17,7 @@ public class Bank : MonoBehaviour
       if(Money >= value)
       {
         Money -= value;
+		_audioSource.Play();
         OnChanged.Invoke();
 		return true;
 	  } 
