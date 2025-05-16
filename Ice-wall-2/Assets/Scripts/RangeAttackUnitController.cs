@@ -21,15 +21,20 @@ namespace DefaultNamespace
 
 		private IEnumerator WeaponCooldown()
 		{
-			yield return new WaitForSeconds(UnitData.AttackCooldown);
+			var upgrade = UpgradeManager.CurrentUpgrade(UnitData);
+			var cooldown = UnitData.AttackCooldown;
+			cooldown /= upgrade.CooldownDivisor;
+			yield return new WaitForSeconds(cooldown);
 		}
 
 		private IEnumerator FireProjectile()
 		{
-			Vector3 offset = transform.up * 1f;
+			Vector3 offset = transform.up * UnitData.ProjectileOffset;
+			var upgrade = UpgradeManager.CurrentUpgrade(UnitData);
 			var bullet = Instantiate(ProjectileData.ProjectilePrefab, transform.position + offset, Quaternion.identity);
 			var projectileController = bullet.GetComponent<ProjectileController>();
 			projectileController.SetTarget(Wall);
+			projectileController.SetUpgrade(upgrade);
 			yield return new WaitForSeconds(1f);
 		}
 	}

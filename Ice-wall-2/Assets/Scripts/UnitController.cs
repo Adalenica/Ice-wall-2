@@ -8,10 +8,11 @@ namespace DefaultNamespace
 {
 	public class UnitController: MonoBehaviour
 	{
-		[SerializeField] protected UnitData UnitData;	
+		[SerializeField] protected UnitData UnitData;
 		
 		protected Wall Wall;
 		public Vector2 SpawnPosition;
+		protected UpgradeManager UpgradeManager;
 
 		[ContextMenu("Attack")]
 		public void Attack()
@@ -49,8 +50,10 @@ namespace DefaultNamespace
 
 		protected IEnumerator WaitForNextAttack()
 		{
-			Debug.Log("Waiting for attack");
-			yield return new WaitForSeconds(UnitData.AttackCooldown);
+			var upgrade = UpgradeManager.CurrentUpgrade(UnitData);
+			var cooldown = UnitData.AttackCooldown;
+			cooldown /= upgrade.CooldownDivisor;
+			yield return new WaitForSeconds(cooldown);
 		}
 
 		protected IEnumerator ReturnToOrigin()
@@ -68,10 +71,16 @@ namespace DefaultNamespace
 
 		protected IEnumerator PerformAttack()
 		{
-			Wall.TakeDamage(UnitData.Strength);
+			var upgrade = UpgradeManager.CurrentUpgrade(UnitData);
+			var strength = UnitData.Strength;
+			strength *= upgrade.StrengthMultiplier;
+			Wall.TakeDamage(strength);
 			yield return new WaitForSeconds(1f);
 		}
-
 		
+		public void SetUpgradeManager(UpgradeManager upgradeManager)
+		{
+			UpgradeManager = upgradeManager;
+		}
 	}
 }

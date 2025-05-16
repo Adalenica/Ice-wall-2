@@ -3,9 +3,11 @@ using UnityEngine.Events;
 
 public class Bank : MonoBehaviour
 {
-    public int Money = 0;
+	[SerializeField] private AudioSource _audioSource;
+	public int Money = 0;
     public UnityEvent OnChanged;
-    public void Deposit(int value)
+    
+	public void Deposit(int value)
     {
       Money += value;
       OnChanged.Invoke();
@@ -15,6 +17,7 @@ public class Bank : MonoBehaviour
       if(Money >= value)
       {
         Money -= value;
+		_audioSource.Play();
         OnChanged.Invoke();
 		return true;
 	  } 
