@@ -8,6 +8,7 @@ namespace DefaultNamespace
 	{
 		[SerializeField] private AudioSource _audioSource;
 		[SerializeField] private Button _myButton;
+		[SerializeField] private int _scene;
 		
 		void Start()
 		{
@@ -17,7 +18,7 @@ namespace DefaultNamespace
 		void ButtonClicked()
 		{
 			_audioSource.Play();
-			SceneManager.LoadScene(1);
+			SceneManager.LoadScene(_scene);
 		}
 	}
 }

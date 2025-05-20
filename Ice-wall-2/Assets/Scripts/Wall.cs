@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -5,6 +6,7 @@ public class Wall : MonoBehaviour
 {
 	[SerializeField] public float Health;
 	[SerializeField] private AudioSource _audioSource;
+	[SerializeField] private LevelManager _levelManager;
 	public UnityEvent OnChanged;
 
     public Bank Bank;
@@ -23,6 +25,7 @@ public class Wall : MonoBehaviour
 		if (Health <= 0)
 		{
 			Destroy(gameObject);
+			_levelManager.WallDestroyed();
 		}
 	}
 
