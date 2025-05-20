@@ -7,7 +7,9 @@ namespace DefaultNamespace
 	public class LevelManager: MonoBehaviour
 	{
 		[SerializeField] Wall _wall;
-		private float _currentWall = 0;
+		[SerializeField] GameObject wall2;
+		[SerializeField] HealthCounter _healthCounter;
+		public float CurrentWall = 0;
 		private int _numberLevels = 2;
 		public Camera camera1;
 		public Camera camera2;
@@ -15,18 +17,18 @@ namespace DefaultNamespace
 
 		public void Start()
 		{
-			
+			wall2.SetActive(false);
 		}
 		
 		public void WallDestroyed()
 		{
-			_currentWall ++;
-			if (_currentWall == 1)
+			CurrentWall ++;
+			if (CurrentWall == 1)
 			{
 				StartLevel2();
 			}
 
-			if (_currentWall >= _numberLevels)
+			if (CurrentWall >= _numberLevels)
 			{
 				GameOver();
 			}
@@ -38,8 +40,15 @@ namespace DefaultNamespace
 
 		private void StartLevel2()
 		{
-			UnitManager.Instance.DestroyAllUnits();
+			NewLevel();
+			wall2.SetActive(true);
 			SwitchCamera();
+		}
+
+		private void NewLevel()
+		{
+			UnitManager.Instance.DestroyAllUnits();
+			_healthCounter.Awake();
 		}
 		
 		void SwitchCamera()

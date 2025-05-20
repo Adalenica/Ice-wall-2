@@ -13,6 +13,7 @@ namespace DefaultNamespace
 		protected Wall Wall;
 		public Vector2 SpawnPosition;
 		protected UpgradeManager UpgradeManager;
+		protected float CurrentWall;
 
 		[ContextMenu("Attack")]
 		public void Attack()
@@ -40,11 +41,20 @@ namespace DefaultNamespace
 		
 		private void RandomisePosition()
 		{
-			float minX = -7f;
-			float maxX = 5f;
-
-			 SpawnPosition = new Vector2(Random.Range(minX, maxX), -4f);
-			transform.position = SpawnPosition;
+			if (CurrentWall == 1)
+			{
+				float minX = 18f;
+				float maxX = 25f;
+				SpawnPosition = new Vector2(Random.Range(minX, maxX), -4f);
+				transform.position = SpawnPosition;
+			}
+			else
+			{
+				float minX = -7f;
+				float maxX = 5f;
+				SpawnPosition = new Vector2(Random.Range(minX, maxX), -4f);
+				transform.position = SpawnPosition;
+			}
 		}
 
 		
@@ -84,6 +94,11 @@ namespace DefaultNamespace
 			UpgradeManager = upgradeManager;
 		}
 
+		public void GetLevel(LevelManager currentWall)
+		{
+			//CurrentWall = currentWall;
+		}
+		
 		private void OnDestroy()
 		{
 			UnitManager.Instance?.UnregisterUnit(gameObject);
