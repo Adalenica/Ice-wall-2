@@ -9,6 +9,9 @@ namespace DefaultNamespace
 		[SerializeField] Wall _wall;
 		private float _currentWall = 0;
 		private int _numberLevels = 2;
+		public Camera camera1;
+		public Camera camera2;
+
 
 		public void Start()
 		{
@@ -36,6 +39,13 @@ namespace DefaultNamespace
 		private void StartLevel2()
 		{
 			UnitManager.Instance.DestroyAllUnits();
+			SwitchCamera();
+		}
+		
+		void SwitchCamera()
+		{
+			camera1.enabled = !camera1.enabled;
+			camera2.enabled = !camera2.enabled;
 		}
 	}
 }
