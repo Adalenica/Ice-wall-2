@@ -11,7 +11,9 @@ public class UnitSpawner : MonoBehaviour
 	{
 		var unit = Instantiate(unitPrefab);
 		var unitController = unit.GetComponent<UnitController>();
+		var aerialUnitController = unit.GetComponent<AerialUnitController>();
 		unitController.SetUpgradeManager(_upgradeManager);
-		//unitController.GetLevel(_levelManager.CurrentWall);
+		unitController.SetLevelManager(_levelManager);
+		//aerialUnitController.SetLevelManager(_levelManager);
 	}
 }

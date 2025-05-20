@@ -13,7 +13,7 @@ namespace DefaultNamespace
 		protected Wall Wall;
 		public Vector2 SpawnPosition;
 		protected UpgradeManager UpgradeManager;
-		protected float CurrentWall;
+		protected LevelManager LevelManager;
 
 		[ContextMenu("Attack")]
 		public void Attack()
@@ -41,7 +41,7 @@ namespace DefaultNamespace
 		
 		private void RandomisePosition()
 		{
-			if (CurrentWall == 1)
+			if (LevelManager.CurrentWall == 1)
 			{
 				float minX = 18f;
 				float maxX = 25f;
@@ -94,9 +94,9 @@ namespace DefaultNamespace
 			UpgradeManager = upgradeManager;
 		}
 
-		public void GetLevel(LevelManager currentWall)
+		public void SetLevelManager(LevelManager levelManager)
 		{
-			//CurrentWall = currentWall;
+			LevelManager = levelManager;
 		}
 		
 		private void OnDestroy()

@@ -112,3 +112,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d84baaf8504c59a7d61b4ccbc98455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UnitData: {fileID: 11400000, guid: 8fafc616348a32b4f9f4d4bd646c2d18, type: 2}
+  SpawnPosition: {x: 0, y: 0}

@@ -5315,7 +5315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef8bc7c3c1c6874e90fab1729f37b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 5
+  Health: 15
   _audioSource: {fileID: 592014880}
   _levelManager: {fileID: 797350611}
   OnChanged:
@@ -5773,7 +5773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _upgradeManager: {fileID: 922279993}
-  _levelManager: {fileID: 0}
+  _levelManager: {fileID: 797350611}
 --- !u!4 &1643948073
 Transform:
   m_ObjectHideFlags: 0
@@ -6020,7 +6020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef8bc7c3c1c6874e90fab1729f37b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 10
+  Health: 20
   _audioSource: {fileID: 592014880}
   _levelManager: {fileID: 797350611}
   OnChanged:
