@@ -24,6 +24,7 @@ namespace DefaultNamespace
 		{
 			Setup();
 			StartAttackRoutine();
+			UnitManager.Instance.RegisterUnit(gameObject);
 		}
 
 		protected virtual void StartAttackRoutine()
@@ -81,6 +82,11 @@ namespace DefaultNamespace
 		public void SetUpgradeManager(UpgradeManager upgradeManager)
 		{
 			UpgradeManager = upgradeManager;
+		}
+
+		private void OnDestroy()
+		{
+			UnitManager.Instance?.UnregisterUnit(gameObject);
 		}
 	}
 }
