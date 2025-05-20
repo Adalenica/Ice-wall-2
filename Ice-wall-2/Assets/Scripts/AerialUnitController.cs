@@ -12,6 +12,12 @@ namespace DefaultNamespace
 		{
 			RandomisePosition();
 		}
+
+		public void SetLevelManager(LevelManager levelManager)
+		{
+			_levelManager = levelManager;
+		}
+
 		private void RandomisePosition()
 		{
 			if (_levelManager.CurrentWall == 1)
@@ -32,11 +38,6 @@ namespace DefaultNamespace
 				var setPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
 				transform.position = setPosition;
 			}
-			//public void SetLevelManager(LevelManager levelManager)
-			{
-				//_levelManager = levelManager;
-			}
 		}
-		
 	}
 }
