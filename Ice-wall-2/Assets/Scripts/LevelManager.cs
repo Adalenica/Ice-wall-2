@@ -9,7 +9,7 @@ namespace DefaultNamespace
 		[SerializeField] Wall _wall;
 		[SerializeField] GameObject wall2;
 		[SerializeField] HealthCounter _healthCounter;
-		[SerializeField] HealthSlider _healthSlider;
+		[SerializeField] HealthBar _healthBar;
 		[SerializeField] CameraController _cameraController;
 		public float CurrentWall = 0;
 		private int _numberLevels = 2;
@@ -47,7 +47,7 @@ namespace DefaultNamespace
 		{
 			UnitManager.Instance.DestroyAllUnits();
 			_healthCounter.Awake();
-			_healthSlider.Awake();
+			_healthBar.Awake();
 			_cameraController.CameraTransition();
 		}
 	}
