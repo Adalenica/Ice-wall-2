@@ -13,7 +13,7 @@ namespace DefaultNamespace
 		
 		public void Awake()
 		{
-			if (_levelManager.CurrentWall == 1)
+			if (_levelManager.CurrentWall == 1f)
 			{
 				label.text = _wall2.Health.ToString();
 				_wall2.OnChanged.AddListener(UpdateLabel);
@@ -26,7 +26,7 @@ namespace DefaultNamespace
 		}
 		public void UpdateLabel()
 		{
-			if (_levelManager.CurrentWall == 1)
+			if (_levelManager.CurrentWall == 1f)
 			{
 				label.text = _wall2.Health.ToString();
 			}

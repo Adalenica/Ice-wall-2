@@ -9,13 +9,11 @@ namespace DefaultNamespace
 		[SerializeField] Wall _wall;
 		[SerializeField] GameObject wall2;
 		[SerializeField] HealthCounter _healthCounter;
+		[SerializeField] HealthSlider _healthSlider;
 		[SerializeField] CameraController _cameraController;
 		public float CurrentWall = 0;
 		private int _numberLevels = 2;
-		public Camera camera1;
-		public Camera camera2;
-
-
+		
 		public void Start()
 		{
 			wall2.SetActive(false);
@@ -24,7 +22,7 @@ namespace DefaultNamespace
 		public void WallDestroyed()
 		{
 			CurrentWall ++;
-			if (CurrentWall == 1)
+			if (CurrentWall == 1f)
 			{
 				StartLevel2();
 			}
@@ -43,20 +41,14 @@ namespace DefaultNamespace
 		{
 			NewLevel();
 			wall2.SetActive(true);
-			//SwitchCamera();
 		}
 
 		private void NewLevel()
 		{
 			UnitManager.Instance.DestroyAllUnits();
 			_healthCounter.Awake();
+			_healthSlider.Awake();
 			_cameraController.CameraTransition();
-		}
-
-		void SwitchCamera()
-		{
-			camera1.enabled = !camera1.enabled;
-			camera2.enabled = !camera2.enabled;
 		}
 	}
 }

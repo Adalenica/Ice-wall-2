@@ -18,12 +18,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 601369527256665320, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
       propertyPath: m_FlipX
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 601369527256665320, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -5402999797584778423, guid: 674c7bdd0ee87814183eec8cbfe6c495, type: 3}
+      objectReference: {fileID: 99915255197713731, guid: ac1ccb1d9e11436498eeecd5cd45cb89, type: 3}
     - target: {fileID: 7697995037063923891, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.11
