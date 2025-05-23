@@ -4,23 +4,11 @@ using Random = UnityEngine.Random;
 
 namespace DefaultNamespace
 {
-	public class AerialUnitController: MonoBehaviour
+	public class AerialUnitController: RangeAttackUnitController
 	{
-		private LevelManager _levelManager;
-		
-		private void Start()
+		protected override void RandomisePosition()
 		{
-			RandomisePosition();
-		}
-
-		public void SetLevelManager(LevelManager levelManager)
-		{
-			_levelManager = levelManager;
-		}
-
-		private void RandomisePosition()
-		{
-			if (_levelManager.CurrentWall == 1)
+			if (Mathf.Approximately(LevelManager.CurrentWall, 1f))
 			{
 				float minY = -2f;
 				float maxY = 4f;

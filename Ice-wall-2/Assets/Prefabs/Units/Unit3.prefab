@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unit3
       objectReference: {fileID: 0}
+    - target: {fileID: 601369527256665320, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 601369527256665320, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5473684398165861851, guid: 233d8f7776b2b1e4c9569c0f5332be90, type: 3}
     - target: {fileID: 7697995037063923891, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.11
@@ -75,9 +83,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 312179642741573312, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8019285842654655735}
-    - targetCorrespondingSourceObject: {fileID: 312179642741573312, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3659521974511809030}
   m_SourcePrefab: {fileID: 100100000, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
 --- !u!1 &7359996825624333734 stripped
@@ -85,21 +90,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 312179642741573312, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
   m_PrefabInstance: {fileID: 7095108561129114470}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8019285842654655735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7359996825624333734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f40dbfb677b4189b68bdd5268afcadd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitData: {fileID: 11400000, guid: 8fafc616348a32b4f9f4d4bd646c2d18, type: 2}
-  SpawnPosition: {x: 0, y: 0}
-  ProjectileData: {fileID: 11400000, guid: 1b66568ef262c31458de106841d03791, type: 2}
 --- !u!114 &3659521974511809030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,3 +104,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnitData: {fileID: 11400000, guid: 8fafc616348a32b4f9f4d4bd646c2d18, type: 2}
   SpawnPosition: {x: 0, y: 0}
+  ProjectileData: {fileID: 11400000, guid: 1b66568ef262c31458de106841d03791, type: 2}

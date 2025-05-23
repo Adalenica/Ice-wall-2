@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unit2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 601369527256665320, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 601369527256665320, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5402999797584778423, guid: 674c7bdd0ee87814183eec8cbfe6c495, type: 3}
     - target: {fileID: 7697995037063923891, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.11
@@ -95,4 +103,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitData: {fileID: 11400000, guid: f66540993471e0e4986f354c95cf94cd, type: 2}
+  SpawnPosition: {x: 0, y: 0}
   ProjectileData: {fileID: 11400000, guid: 7bdbf80ebf826ef48bcf8ab7fb6ce9be, type: 2}

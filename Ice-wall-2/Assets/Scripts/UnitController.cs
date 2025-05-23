@@ -21,7 +21,7 @@ namespace DefaultNamespace
 			Debug.Log("Attack");
 		}
 		
-		public void Start()
+		protected virtual void Start()
 		{
 			Setup();
 			StartAttackRoutine();
@@ -39,7 +39,7 @@ namespace DefaultNamespace
 			Wall = FindFirstObjectByType<Wall>();
 		}
 		
-		private void RandomisePosition()
+		protected virtual void RandomisePosition()
 		{
 			if (LevelManager.CurrentWall == 1)
 			{

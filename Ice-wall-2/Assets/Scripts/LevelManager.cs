@@ -9,6 +9,7 @@ namespace DefaultNamespace
 		[SerializeField] Wall _wall;
 		[SerializeField] GameObject wall2;
 		[SerializeField] HealthCounter _healthCounter;
+		[SerializeField] CameraController _cameraController;
 		public float CurrentWall = 0;
 		private int _numberLevels = 2;
 		public Camera camera1;
@@ -42,15 +43,16 @@ namespace DefaultNamespace
 		{
 			NewLevel();
 			wall2.SetActive(true);
-			SwitchCamera();
+			//SwitchCamera();
 		}
 
 		private void NewLevel()
 		{
 			UnitManager.Instance.DestroyAllUnits();
 			_healthCounter.Awake();
+			_cameraController.CameraTransition();
 		}
-		
+
 		void SwitchCamera()
 		{
 			camera1.enabled = !camera1.enabled;
