@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileData: {fileID: 11400000, guid: 7bdbf80ebf826ef48bcf8ab7fb6ce9be, type: 2}
+  _projectileExplosion: {fileID: 520385110856180491}
 --- !u!1 &7020496970956848020
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,6 +58,7 @@ GameObject:
   - component: {fileID: 3342321965081268992}
   - component: {fileID: 7080720503336900623}
   - component: {fileID: 8063361801444159929}
+  - component: {fileID: 520385110856180491}
   m_Layer: 0
   m_Name: Projectile1
   m_TagString: Untagged
@@ -147,3 +149,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileData: {fileID: 11400000, guid: 7bdbf80ebf826ef48bcf8ab7fb6ce9be, type: 2}
+  _projectileExplosion: {fileID: 520385110856180491}
+--- !u!114 &520385110856180491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7020496970956848020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f1a653d9ac4a21b2a0f0af13f247a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionSprite: {fileID: -4309635042379901944, guid: a527f41e79e1fff42bb71ae92e9b4a01, type: 3}

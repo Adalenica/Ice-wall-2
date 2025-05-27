@@ -11,7 +11,8 @@ namespace IceWall
 		private RangeAttackUnitController _rangeAttackUnitController;
 		private AerialUnitController _aerialUnitController;
 		private UpgradeData _upgrade;
-
+		public ProjectileExplosion _projectileExplosion;
+		
 		public void SetTarget(Wall wall)
 		{
 			_wall = wall;
@@ -43,9 +44,10 @@ namespace IceWall
 			Debug.Log("attacking wall");
 			var damage = _projectileData.Damage * _upgrade.StrengthMultiplier;
 			_wall.TakeDamage(damage);
+			//_projectileExplosion.Explode();
 			yield return null;
 		}
-
+		
 		public void SetUpgrade(UpgradeData upgrade)
 		{
 			_upgrade = upgrade;
