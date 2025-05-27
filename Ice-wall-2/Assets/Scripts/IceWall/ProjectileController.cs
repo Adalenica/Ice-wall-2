@@ -44,8 +44,8 @@ namespace IceWall
 			Debug.Log("attacking wall");
 			var damage = _projectileData.Damage * _upgrade.StrengthMultiplier;
 			_wall.TakeDamage(damage);
-			//_projectileExplosion.Explode();
-			yield return null;
+			_projectileExplosion.Explode();
+			yield return new WaitForSeconds(1f);
 		}
 		
 		public void SetUpgrade(UpgradeData upgrade)
