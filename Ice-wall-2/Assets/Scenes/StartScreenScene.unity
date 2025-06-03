@@ -313,6 +313,7 @@ GameObject:
   - component: {fileID: 845172846}
   - component: {fileID: 845172845}
   - component: {fileID: 845172848}
+  - component: {fileID: 845172849}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -435,6 +436,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopWindow: {fileID: 884936777}
+--- !u!114 &845172849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845172843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66ce9eb7e8c4ec6b0baa4982ded52ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _settingsMenu: {fileID: 884936777}
+  _myButton: {fileID: 845172845}
 --- !u!1 &884936777
 GameObject:
   m_ObjectHideFlags: 0

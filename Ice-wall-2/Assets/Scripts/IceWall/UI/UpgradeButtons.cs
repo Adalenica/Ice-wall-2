@@ -11,6 +11,7 @@ namespace IceWall.UI
 		[SerializeField] private UnitData _unitData;
 		[SerializeField] private UpgradeManager _upgradeManager;
 		[SerializeField] private int _version;
+		[SerializeField] private UpgradeButtonText _upgradeButtonText;
 		
 		void Start()
 		{
@@ -24,19 +25,20 @@ namespace IceWall.UI
 				if (_version == 1)
 				{
 					Debug.Log("attack upgraded");
-					_audioSource.Play();
 					_upgradeManager.UpgradeStrength(_unitData, 1);
+					_upgradeButtonText.UpdateLabel();
 				}
 				else
 				{
 					Debug.Log("cooldown upgraded");
-					_audioSource.Play();
 					_upgradeManager.UpgradeCooldown(_unitData, 1);
+					_upgradeButtonText.UpdateLabel();
 				}
 			}
 			else
 			{
 				Debug.Log("can't withdraw");
+				_audioSource.Play();
 			}
 		}
 	}
