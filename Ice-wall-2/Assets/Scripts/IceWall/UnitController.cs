@@ -39,16 +39,30 @@ namespace IceWall
 		
 		protected virtual void RandomisePosition()
 		{
-			if (LevelManager.CurrentWall == 1)
+			if (LevelManager.CurrentWall == 1f)
 			{
 				float minX = 18f;
 				float maxX = 25f;
 				SpawnPosition = new Vector2(Random.Range(minX, maxX), -4f);
 				transform.position = SpawnPosition;
 			}
+			if (LevelManager.CurrentWall == 2f)
+			{
+				float minX = 38f;
+				float maxX = 45f;
+				SpawnPosition = new Vector2(Random.Range(minX, maxX), -4f);
+				transform.position = SpawnPosition;
+			}
+			if (LevelManager.CurrentWall == 3f)
+			{
+				float minX = 58f;
+				float maxX = 65f;
+				SpawnPosition = new Vector2(Random.Range(minX, maxX), -4f);
+				transform.position = SpawnPosition;
+			}
 			else
 			{
-				float minX = -7f;
+				float minX = -8f;
 				float maxX = 5f;
 				SpawnPosition = new Vector2(Random.Range(minX, maxX), -4f);
 				transform.position = SpawnPosition;

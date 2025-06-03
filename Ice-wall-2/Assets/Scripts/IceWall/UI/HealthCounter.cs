@@ -7,6 +7,8 @@ namespace IceWall.UI
 	{
 		[SerializeField] private Wall _wall;
 		[SerializeField] private Wall _wall2;
+		[SerializeField] private Wall _wall3;
+		[SerializeField] private Wall _wall4;
 		[SerializeField] private LevelManager _levelManager;
 		public TextMeshProUGUI label;
 		
@@ -16,6 +18,16 @@ namespace IceWall.UI
 			{
 				label.text = _wall2.Health.ToString();
 				_wall2.OnChanged.AddListener(UpdateLabel);
+			}
+			if (_levelManager.CurrentWall == 2f)
+			{
+				label.text = _wall3.Health.ToString();
+				_wall3.OnChanged.AddListener(UpdateLabel);
+			}
+			if (_levelManager.CurrentWall == 3f)
+			{
+				label.text = _wall4.Health.ToString();
+				_wall4.OnChanged.AddListener(UpdateLabel);
 			}
 			else
 			{
@@ -28,6 +40,14 @@ namespace IceWall.UI
 			if (_levelManager.CurrentWall == 1f)
 			{
 				label.text = _wall2.Health.ToString();
+			}
+			if (_levelManager.CurrentWall == 2f)
+			{
+				label.text = _wall3.Health.ToString();
+			}
+			if (_levelManager.CurrentWall == 3f)
+			{
+				label.text = _wall4.Health.ToString();
 			}
 			else
 			{

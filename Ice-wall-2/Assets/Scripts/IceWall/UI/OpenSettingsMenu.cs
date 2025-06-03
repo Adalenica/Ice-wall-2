@@ -7,6 +7,7 @@ namespace IceWall.UI
 	{
 		[SerializeField] private GameObject _settingsMenu;
 		[SerializeField] private Button _myButton;
+		[SerializeField] private AudioSource _audioSource;
 
 		public void Start()
 		{
@@ -18,6 +19,7 @@ namespace IceWall.UI
 		{
 			if (_settingsMenu != null)
 			{
+				_audioSource.Play();
 				_settingsMenu.SetActive(!_settingsMenu.activeSelf);
 			}
 		}

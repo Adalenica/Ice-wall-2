@@ -450,6 +450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _settingsMenu: {fileID: 884936777}
   _myButton: {fileID: 845172845}
+  _audioSource: {fileID: 1241768165}
 --- !u!1 &884936777
 GameObject:
   m_ObjectHideFlags: 0
