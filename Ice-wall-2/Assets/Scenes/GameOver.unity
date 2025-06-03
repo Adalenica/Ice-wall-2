@@ -178,8 +178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Game Over
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ae334617d6c7df849bc3f79f7ee9a821, type: 2}
+  m_sharedMaterial: {fileID: -2722057718046847197, guid: ae334617d6c7df849bc3f79f7ee9a821, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -686,8 +686,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Restart
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ae334617d6c7df849bc3f79f7ee9a821, type: 2}
+  m_sharedMaterial: {fileID: -2722057718046847197, guid: ae334617d6c7df849bc3f79f7ee9a821, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -981,7 +981,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 807.6, y: 471.4}
+  m_SizeDelta: {x: 816.4, y: 471.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1351389460
 MonoBehaviour:
@@ -996,14 +996,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3843137, g: 1, b: 0.56367385, a: 1}
+  m_Color: {r: 0.3226415, g: 1, b: 0.38097715, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -6901876634832071259, guid: b7a62c00cae7e3a479b4f9d996aa4422, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
