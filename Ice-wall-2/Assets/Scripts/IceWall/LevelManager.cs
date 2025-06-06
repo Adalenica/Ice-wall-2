@@ -14,7 +14,7 @@ namespace IceWall
 		[SerializeField] HealthCounter _healthCounter;
 		[SerializeField] HealthBar _healthBar;
 		[SerializeField] CameraController _cameraController;
-		public float CurrentWall = 0;
+		public int CurrentWall = 0;
 		private int _numberLevels = 4;
 		
 		public void Start()
@@ -22,6 +22,9 @@ namespace IceWall
 			_wall2.SetActive(false);
 			_wall3.SetActive(false);
 			_wall4.SetActive(false);
+			_healthCounter.SetUp();
+			_healthBar.SetUp();
+			
 		}
 		
 		public void WallDestroyed()
@@ -73,8 +76,8 @@ namespace IceWall
 		private void NewLevel()
 		{
 			UnitManager.Instance.DestroyAllUnits();
-			_healthCounter.Awake();
-			_healthBar.Awake();
+			_healthCounter.SetUp();
+			_healthBar.SetUp();
 			_cameraController.CameraTransition();
 		}
 	}

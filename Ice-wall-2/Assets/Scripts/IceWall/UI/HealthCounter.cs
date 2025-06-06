@@ -12,7 +12,7 @@ namespace IceWall.UI
 		[SerializeField] private LevelManager _levelManager;
 		public TextMeshProUGUI label;
 		
-		public void Awake()
+		public void SetUp()
 		{
 			if (_levelManager.CurrentWall == 1f)
 			{

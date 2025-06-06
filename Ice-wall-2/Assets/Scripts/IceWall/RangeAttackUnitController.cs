@@ -7,6 +7,7 @@ namespace IceWall
 	{
 		[SerializeField] private ProjectileData ProjectileData;
 		private ProjectileController _projectileController;
+		
 		protected override void StartAttackRoutine()
 		{
 			StartCoroutine(UnitRangedAttackRoutine());
