@@ -4134,12 +4134,18 @@ MonoBehaviour:
   - UnitData: {fileID: 11400000, guid: 3b5398f34fb2a7a48b6a37d211584df9, type: 2}
     StrengthMultiplier: 1
     CooldownDivisor: 1
+    SpriteCooldownIndex: 0
+    SpriteStrengthIndex: 0
   - UnitData: {fileID: 11400000, guid: f66540993471e0e4986f354c95cf94cd, type: 2}
     StrengthMultiplier: 1
     CooldownDivisor: 1
+    SpriteCooldownIndex: 0
+    SpriteStrengthIndex: 0
   - UnitData: {fileID: 11400000, guid: 8fafc616348a32b4f9f4d4bd646c2d18, type: 2}
     StrengthMultiplier: 1
     CooldownDivisor: 1
+    SpriteCooldownIndex: 0
+    SpriteStrengthIndex: 0
 --- !u!4 &922279994
 Transform:
   m_ObjectHideFlags: 0

@@ -85,6 +85,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7070649645628077214}
   m_SourcePrefab: {fileID: 100100000, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
+--- !u!212 &5159447948068012924 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2732815499314939930, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
+  m_PrefabInstance: {fileID: 7095108561129114470}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7359996825624333734 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 312179642741573312, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
@@ -103,5 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitData: {fileID: 11400000, guid: f66540993471e0e4986f354c95cf94cd, type: 2}
+  CooldownSprite: {fileID: 0}
+  StrengthSprite: {fileID: 5159447948068012924}
   SpawnPosition: {x: 0, y: 0}
   ProjectileData: {fileID: 11400000, guid: 7bdbf80ebf826ef48bcf8ab7fb6ce9be, type: 2}

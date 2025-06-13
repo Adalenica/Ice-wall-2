@@ -5,7 +5,7 @@ namespace IceWall.UI
 {
 	public class MusicButton: MonoBehaviour
 	{
-		[SerializeField] private GameObject _audioSource;
+		[SerializeField] private AudioSource _audioSource;
 		[SerializeField] private Button _myButton;
 
 		public void Start()
@@ -15,10 +15,7 @@ namespace IceWall.UI
 		
 		public void ButtonClicked()
 		{
-			if (_audioSource != null)
-			{
-				_audioSource.SetActive(!_audioSource.activeSelf);
-			}
+			_audioSource.volume = 0;
 		}
 	}
 }
