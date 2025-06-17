@@ -18,7 +18,11 @@ MonoBehaviour:
   AttackCooldown: 5
   Speed: 1
   ProjectileOffset: -1
-  CooldownSprites: []
+  CooldownSprites:
+  - {fileID: 0}
+  - {fileID: -8120879355618570477, guid: 07b31559b253c8844a362469f2ae49cc, type: 3}
+  - {fileID: 2669518137683657659, guid: 407a0578979a91b488269a5e5b76164d, type: 3}
+  - {fileID: -2301018425578721248, guid: 0924c1022d01f1c4d84cf87a46479c60, type: 3}
   StrengthSprites:
   - {fileID: 0}
   - {fileID: -8120879355618570477, guid: 07b31559b253c8844a362469f2ae49cc, type: 3}

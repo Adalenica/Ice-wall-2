@@ -88,6 +88,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6670356564783492306}
   m_SourcePrefab: {fileID: 100100000, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
+--- !u!212 &3874665887510841604 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6319526358389572194, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
+  m_PrefabInstance: {fileID: 7095108561129114470}
+  m_PrefabAsset: {fileID: 0}
 --- !u!212 &5159447948068012924 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 2732815499314939930, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
@@ -111,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitData: {fileID: 11400000, guid: 8fafc616348a32b4f9f4d4bd646c2d18, type: 2}
-  CooldownSprite: {fileID: 0}
+  CooldownSprite: {fileID: 3874665887510841604}
   StrengthSprite: {fileID: 5159447948068012924}
   SpawnPosition: {x: 0, y: 0}
   ProjectileData: {fileID: 11400000, guid: 1b66568ef262c31458de106841d03791, type: 2}
