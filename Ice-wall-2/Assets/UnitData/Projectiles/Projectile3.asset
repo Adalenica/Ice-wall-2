@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f65c5c66845f4decb294c6745947c173, type: 3}
-  m_Name: Projectile2
+  m_Name: Projectile3
   m_EditorClassIdentifier: 
-  ProjectilePrefab: {fileID: 6294946840812205618, guid: 9ac044bbd6f9bc34896e0f91b03fd934, type: 3}
-  Speed: 10
-  Damage: 3
+  ProjectilePrefab: {fileID: 6294946840812205618, guid: 0560c2998d94e5b4db074cce2eb44a04, type: 3}
+  Speed: 20
+  Damage: 10

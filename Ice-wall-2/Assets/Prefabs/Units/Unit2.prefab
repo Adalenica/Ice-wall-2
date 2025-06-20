@@ -101,7 +101,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: f66540993471e0e4986f354c95cf94cd, type: 2}
     - target: {fileID: 312179642741573312, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
       propertyPath: m_Name
-      value: Unit2 Variant
+      value: Unit2
       objectReference: {fileID: 0}
     - target: {fileID: 601369527256665320, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
       propertyPath: m_FlipX
@@ -111,6 +111,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 99915255197713731, guid: ac1ccb1d9e11436498eeecd5cd45cb89, type: 3}
+    - target: {fileID: 2418303977285065070, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3dd306fa51aca5f48aeb7e2184dc32bf, type: 2}
     - target: {fileID: 7697995037063923891, guid: aa21ae9efc43b2846a0da9791a67be90, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.11

@@ -19,6 +19,6 @@ namespace IceWall.UI
 			_audioSource.volume = volume;
 			PlayerPrefs.SetFloat("MasterVolume", volume);
 		}
-		
+
 	}
-}
+}	

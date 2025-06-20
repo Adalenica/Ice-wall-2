@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 1f14938f012eda84c8aca147ed80bf70
+guid: 849b8f8f20b2cd4448983009514ca9ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9115938624207856695
-    second: sprite_sheet_0
+      213: -3631332640208418489
+    second: ChevronL4_0
   - first:
-      213: -8198574232401945530
-    second: sprite_sheet_1
+      213: 8972909078810167296
+    second: ChevronL4_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -116,45 +116,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite_sheet_0
+      name: ChevronL4_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 58
-        width: 937
-        height: 824
+        x: 247
+        y: 285
+        width: 759
+        height: 734
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: eac03a7be676be248872ce749017f03a
-      internalID: 1496979353
+      spriteID: 749881f043aea9dc0800000000000000
+      internalID: -3631332640208418489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_sheet_1
+      name: ChevronL4_1
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 46
-        width: 918
-        height: 824
+        x: 156
+        y: 48
+        width: 762
+        height: 197
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6ad113a90ff7301438c062b7191a0d3d
-      internalID: -43753008
+      spriteID: 0088b54444d268c70800000000000000
+      internalID: 8972909078810167296
       vertices: []
       indices: 
       edges: []
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e94fa7d5108ddcb46ad8e60e1a69daf1
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprite_sheet_0: 1496979353
-      sprite_sheet_1: -43753008
+      ChevronL4_0: -3631332640208418489
+      ChevronL4_1: 8972909078810167296
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

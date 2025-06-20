@@ -8,7 +8,7 @@ namespace IceWall.UI
 		
 		public void Awake()
 		{
-			_label.text = _unitData.name + "  " + _unitData.Price;
+			_label.text = _unitData.UnitPrefab.name + " £" + _unitData.Price;
 		}
 	}
 }
