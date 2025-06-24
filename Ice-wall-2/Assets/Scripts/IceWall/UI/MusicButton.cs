@@ -6,6 +6,7 @@ namespace IceWall.UI
 	public class MusicButton: MonoBehaviour
 	{
 		[SerializeField] private Button _myButton;
+		[SerializeField] private MusicVolume _musicVolume;
 
 		public void Start()
 		{
@@ -23,6 +24,7 @@ namespace IceWall.UI
 				PlayerPrefs.SetInt("Mute", 1);
 			}
 			Debug.Log(PlayerPrefs.GetInt("Mute"));
+			_musicVolume.Mute();
 		}
 	}
 }
