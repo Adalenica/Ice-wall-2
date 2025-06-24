@@ -5,7 +5,6 @@ namespace IceWall.UI
 {
 	public class MusicButton: MonoBehaviour
 	{
-		[SerializeField] private AudioSource _audioSource;
 		[SerializeField] private Button _myButton;
 
 		public void Start()
@@ -13,9 +12,17 @@ namespace IceWall.UI
 			_myButton.onClick.AddListener(ButtonClicked);
 		}
 		
-		public void ButtonClicked()
+		private void ButtonClicked()
 		{
-			_audioSource.volume = 0;
+			if (PlayerPrefs.GetInt("Mute") == 1)
+			{
+				PlayerPrefs.SetInt("Mute", 0);
+			}
+			else if (PlayerPrefs.GetInt("Mute") != 1)
+			{
+				PlayerPrefs.SetInt("Mute", 1);
+			}
+			Debug.Log(PlayerPrefs.GetInt("Mute"));
 		}
 	}
 }
