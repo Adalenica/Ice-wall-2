@@ -254,6 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _myButton: {fileID: 2880857}
+  _musicVolume: {fileID: 567500780}
 --- !u!1 &107411800
 GameObject:
   m_ObjectHideFlags: 0
