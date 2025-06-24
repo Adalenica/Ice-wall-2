@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TunnelDrillerV4
+  m_Name: Unit1Anim
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -3475597549966345451, guid: a74f12d25c9cf834c8ee8d2b1ecb10ee, type: 3}
+      value: {fileID: 2032336000598038611, guid: 107d689c446b9fd41a1855fe6168a443, type: 3}
     - time: 0.083333336
-      value: {fileID: -4419284188356633828, guid: a74f12d25c9cf834c8ee8d2b1ecb10ee, type: 3}
+      value: {fileID: -8871339373775135280, guid: 107d689c446b9fd41a1855fe6168a443, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,8 +46,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -3475597549966345451, guid: a74f12d25c9cf834c8ee8d2b1ecb10ee, type: 3}
-    - {fileID: -4419284188356633828, guid: a74f12d25c9cf834c8ee8d2b1ecb10ee, type: 3}
+    - {fileID: 2032336000598038611, guid: 107d689c446b9fd41a1855fe6168a443, type: 3}
+    - {fileID: -8871339373775135280, guid: 107d689c446b9fd41a1855fe6168a443, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
