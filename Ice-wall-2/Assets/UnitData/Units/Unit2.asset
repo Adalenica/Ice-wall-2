@@ -18,3 +18,19 @@ MonoBehaviour:
   AttackCooldown: 5
   Speed: 1
   ProjectileOffset: 1
+  CooldownSprites:
+  - {fileID: 0}
+  - {fileID: -8120879355618570477, guid: 07b31559b253c8844a362469f2ae49cc, type: 3}
+  - {fileID: 2669518137683657659, guid: 407a0578979a91b488269a5e5b76164d, type: 3}
+  - {fileID: -2301018425578721248, guid: 0924c1022d01f1c4d84cf87a46479c60, type: 3}
+  - {fileID: 21300000, guid: 849b8f8f20b2cd4448983009514ca9ed, type: 3}
+  - {fileID: 21300000, guid: bdf3702515bee0c46bc53ee0bedacc49, type: 3}
+  - {fileID: 21300000, guid: badf2499a58d8ca4988ab7995f353b32, type: 3}
+  StrengthSprites:
+  - {fileID: 0}
+  - {fileID: -8120879355618570477, guid: 07b31559b253c8844a362469f2ae49cc, type: 3}
+  - {fileID: 2669518137683657659, guid: 407a0578979a91b488269a5e5b76164d, type: 3}
+  - {fileID: -2301018425578721248, guid: 0924c1022d01f1c4d84cf87a46479c60, type: 3}
+  - {fileID: 21300000, guid: 849b8f8f20b2cd4448983009514ca9ed, type: 3}
+  - {fileID: 21300000, guid: bdf3702515bee0c46bc53ee0bedacc49, type: 3}
+  - {fileID: 21300000, guid: badf2499a58d8ca4988ab7995f353b32, type: 3}

@@ -12,10 +12,8 @@ namespace IceWall
 		{
 			var unit = Instantiate(unitPrefab);
 			var unitController = unit.GetComponent<UnitController>();
-			var aerialUnitController = unit.GetComponent<AerialUnitController>();
 			unitController.SetUpgradeManager(_upgradeManager);
 			unitController.SetLevelManager(_levelManager);
-			aerialUnitController.SetLevelManager(_levelManager);
 		}
 	}
 }

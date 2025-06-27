@@ -10,6 +10,8 @@ namespace IceWall
 		public UnitData UnitData;
 		public float StrengthMultiplier = 1;
 		public float CooldownDivisor = 1;
+		public int SpriteCooldownIndex = 0;
+		public int SpriteStrengthIndex = 0;
 	}
 	
 	public class UpgradeManager: MonoBehaviour
@@ -40,12 +42,14 @@ namespace IceWall
 		{
 			UpgradeData upgrade = CurrentUpgrade(unitData);
 			upgrade.StrengthMultiplier += strengthIncrease;
+			upgrade.SpriteStrengthIndex += 1;
 		}
 		
 		public void UpgradeCooldown(UnitData unitData, float cooldownIncrease)
 		{
 			UpgradeData upgrade = CurrentUpgrade(unitData);
 			upgrade.CooldownDivisor += cooldownIncrease;
+			upgrade.SpriteCooldownIndex += 1;
 		}
 	}
 }

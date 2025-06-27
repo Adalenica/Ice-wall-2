@@ -11,5 +11,7 @@ namespace IceWall
 		public float AttackCooldown;
 		public int Speed;
 		public int ProjectileOffset;
+		public Sprite[] CooldownSprites;
+		public Sprite[] StrengthSprites;
 	}
 }

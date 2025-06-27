@@ -1,38 +1,25 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace IceWall.UI
 {
 	public class HealthCounter: MonoBehaviour
 	{
-		[SerializeField] private Wall _wall;
-		[SerializeField] private Wall _wall2;
+		[SerializeField] private Wall[] _walls;
 		[SerializeField] private LevelManager _levelManager;
 		public TextMeshProUGUI label;
 		
-		public void Awake()
+		public void SetUp()
 		{
-			if (_levelManager.CurrentWall == 1f)
-			{
-				label.text = _wall2.Health.ToString();
-				_wall2.OnChanged.AddListener(UpdateLabel);
-			}
-			else
-			{
-				label.text = _wall.Health.ToString();
-				_wall.OnChanged.AddListener(UpdateLabel);
-			}
+			var index = _levelManager.CurrentWall;
+			label.text = _walls[index].Health.ToString();
+			_walls[index].OnChanged.AddListener(UpdateLabel);
 		}
+		
 		public void UpdateLabel()
 		{
-			if (_levelManager.CurrentWall == 1f)
-			{
-				label.text = _wall2.Health.ToString();
-			}
-			else
-			{
-				label.text = _wall.Health.ToString();
-			}
+			label.text = _walls[_levelManager.CurrentWall].Health.ToString();
 		}
 	}
 }

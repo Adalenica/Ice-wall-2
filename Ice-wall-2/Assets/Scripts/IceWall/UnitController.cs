@@ -7,11 +7,15 @@ namespace IceWall
 	public class UnitController: MonoBehaviour
 	{
 		[SerializeField] protected UnitData UnitData;
+		[SerializeField] protected SpriteRenderer CooldownSprite;
+		[SerializeField] protected SpriteRenderer StrengthSprite;
 		
 		protected Wall Wall;
 		public Vector2 SpawnPosition;
 		protected UpgradeManager UpgradeManager;
 		protected LevelManager LevelManager;
+		protected int SpriteStrengthIndex;
+		protected int SpriteCooldownIndex;
 
 		[ContextMenu("Attack")]
 		public void Attack()
@@ -36,27 +40,56 @@ namespace IceWall
 			RandomisePosition();
 			Wall = FindFirstObjectByType<Wall>();
 		}
-		
-		protected virtual void RandomisePosition()
+
+		protected virtual void Update()
 		{
-			if (LevelManager.CurrentWall == 1)
-			{
-				float minX = 18f;
-				float maxX = 25f;
-				SpawnPosition = new Vector2(Random.Range(minX, maxX), -4f);
-				transform.position = SpawnPosition;
-			}
-			else
-			{
-				float minX = -7f;
-				float maxX = 5f;
-				SpawnPosition = new Vector2(Random.Range(minX, maxX), -4f);
-				transform.position = SpawnPosition;
-			}
+			SetUnitSprite();
 		}
 
-		
+		protected virtual void SetUnitSprite()
+		{
+			var upgrade = UpgradeManager.CurrentUpgrade(UnitData);
+			
+			if(SpriteCooldownIndex != upgrade.SpriteCooldownIndex)
+			{
+				SpriteCooldownIndex = upgrade.SpriteCooldownIndex;
+				UpdateCooldownSprite();
+			}	
+			
+			if(SpriteStrengthIndex != upgrade.SpriteStrengthIndex)
+			{
+				SpriteStrengthIndex = upgrade.SpriteStrengthIndex;
+				UpdateStrengthSprite();
+			}	
+			
+		}
 
+		protected virtual void UpdateStrengthSprite()
+		{
+			if (SpriteStrengthIndex >= UnitData.StrengthSprites.Length) return;
+			if (!StrengthSprite) return;
+			
+			StrengthSprite.sprite = UnitData.StrengthSprites[SpriteStrengthIndex];
+		}
+
+		protected virtual void UpdateCooldownSprite()
+		{
+			if (SpriteCooldownIndex >= UnitData.CooldownSprites.Length) return;
+			if (!CooldownSprite) return;
+			
+			CooldownSprite.sprite = UnitData.CooldownSprites[SpriteCooldownIndex];
+		}
+
+		protected virtual void RandomisePosition()
+		{
+			float minX = -8f + (LevelManager.CurrentWall * 20);
+			float maxX = 5f + (LevelManager.CurrentWall * 20);
+			SpawnPosition = new Vector2(Random.Range(minX, maxX), -4f);
+			transform.position = SpawnPosition;
+			
+			Debug.Log($"SpawnPosition {SpawnPosition.x}, {SpawnPosition.y}, {minX}, {maxX}");
+		}
+		
 		protected IEnumerator WaitForNextAttack()
 		{
 			var upgrade = UpgradeManager.CurrentUpgrade(UnitData);

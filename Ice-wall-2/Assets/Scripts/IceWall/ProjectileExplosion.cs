@@ -6,11 +6,14 @@ namespace IceWall
 	public class ProjectileExplosion: MonoBehaviour
 	{
 		public SpriteRenderer _spriteRenderer;
-		public Sprite _explosionSprite; 
+		public SpriteRenderer _explosionRenderer;
+		public Animator _animator;
 		
 		public void Explode()
 		{
-			_spriteRenderer.sprite = _explosionSprite;
+			_spriteRenderer.enabled = false;
+			_explosionRenderer.enabled = true;
+			_animator.enabled = true;
 		}
 	}
 }
