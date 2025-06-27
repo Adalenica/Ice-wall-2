@@ -120,11 +120,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 55
-        y: 32
-        width: 970
-        height: 987
+        y: 255
+        width: 964
+        height: 501
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -141,12 +141,12 @@ TextureImporter:
       name: TunnelDrillerSpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 1079
-        y: 248
-        width: 969
-        height: 491
+        x: 1076
+        y: 255
+        width: 964
+        height: 501
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b519453aa8727be4daa5e591451685b6
     internalID: 0
     vertices: []
     indices: 
@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TunnelDrillerSpriteSheet_0: 2032336000598038611
+      TunnelDrillerSpriteSheet_1: -8871339373775135280
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
